@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>kick tube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo" id="homeBtn">kick tube</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="検索ワードまたはURL...">
+            <button id="searchBtn">検索</button>
+        </div>
+        <div class="header-right">
+            <button id="openSettings">⚙️ 設定</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li id="sideHome">ホーム</li>
+                <li>登録チャンネル</li>
+                <li class="spacer"></li>
+                <li id="sideSettings">設定</li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div id="listView" class="video-grid"></div>
+
+            <div id="watchView" class="watch-container" style="display: none;">
+                <div class="video-main">
+                    <div id="playerArea"></div>
+                    <div class="video-info">
+                        <div id="videoTitle" class="video-title"></div>
+                    </div>
+                </div>
+                <div id="relatedArea" class="related-videos"></div>
+            </div>
+            
+            <button id="reloadBtn" class="reload-button">動画を再読み込み</button>
+        </main>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h3>設定</h3>
+            <label>YouTube API Key:</label>
+            <input type="password" id="apiKeyInput" placeholder="AIキーを入力">
+            <label>ユーザー名:</label>
+            <input type="text" id="userNameInput" placeholder="名前を入力">
+            <div class="modal-buttons">
+                <button id="saveSettings">保存</button>
+                <button id="closeSettings">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
